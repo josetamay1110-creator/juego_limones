@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #0f172a;
+  background-color: #9fafd4;
   color: white;
   text-align: center;
   margin: 0;
@@ -13,8 +13,8 @@ body {
 }
 
 canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
+  background-color: #8049ce;
+  border: 3px solid #18643d;
   display: block;
   margin: 20px auto;
 }

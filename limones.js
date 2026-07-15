@@ -4,17 +4,20 @@ let ctx=canvas.getContext("2d");
 const ALTURA_SUELO=25;
 const ALTURA_PERSONAJE=60; 
 const ANCHO_PERSONAJE=35;
+const ANCHO_LIMON=20;
+const ALTO_LIMON=20;
 let  personajeX=canvas.width/2
 let personajeY=canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE)
 let limonX=canvas.width/2
 let limonY=0;
 let puntaje=0;
 let vidas=3;
-const ANCHO_LIMON=20
-const ALTO_LIMON=20
+let velocidadCaida=200;
+
 
 
 function iniciar(){
+    setInterval(bajarLimon,velocidadCaida);//primerparametro una funcion,como segundo recibe tiempomilesegundos
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon ();
@@ -74,8 +77,6 @@ function detectarColision(){
         aparecerLimon();
         puntaje=puntaje+1;
         mostrarEnSpan("txtPuntaje",puntaje);
-
-
 
     }
 }
